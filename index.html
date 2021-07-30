@@ -23,20 +23,33 @@
             --white-light: #F9F9F9;
         }
 
+        body {
+            display: flex;
+            flex-flow: column;
+            height: 100vh;
+        }
+
+        header {
+            flex: 0 1 auto;
+        }
 
         main {
-            /* background-image: url("assets/logo.png"); */
+            flex: 1 1 auto;
+        }
+
+
+        .logo-bg {
+            background-image: url("assets/logo.png");
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
             filter: grayscale(30%);
-            box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
         }
     </style>
 </head>
 
 <body class="bg-dark text-center text-white">
-    <header class="fixed-top">
+    <header class="container">
         <nav class="navbar navbar-expand-md navbar-dark">
 
             <div class="navbar-brand">
@@ -48,7 +61,7 @@
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="collapse navbar-collapse me-3" id="navbarNavAltMarkup">
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">Sobre</a>
@@ -61,34 +74,36 @@
                     </li>
                 </ul>
             </div>
+
+            <!-- Social Buttons -->
+            <div>
+                <button type="button" class="btn btn-outline-secondary nav-item" data-bs-toggle="modal"
+                    data-bs-target="#whatsappModal">
+                    <i class="bi bi-whatsapp"></i>
+                </button>
+                <button type="button" class="btn btn-outline-secondary nav-item" data-bs-toggle="modal"
+                    data-bs-target="#emailModal">
+                    <i class="bi bi-envelope"></i>
+                </button>
+                <button type="button" class="btn btn-outline-secondary nav-item" data-bs-toggle="modal"
+                    data-bs-target="#facebookModal">
+                    <i class="bi bi-facebook"></i>
+                </button>
+                <button type="button" class="btn btn-outline-secondary nav-item" data-bs-toggle="modal"
+                    data-bs-target="#mapModal">
+                    <i class="bi bi-geo-alt"></i>
+                </button>
+            </div>
+
         </nav>
     </header>
 
-    <section class="d-flex justify-content-center align-items-center vw-100 vh-100">
+    <main class="d-flex flex-column justify-content-center align-items-center">
         <img src="assets/logo.png">
-    </section>
+    </main>
 
-    <footer class="fixed-bottom">
-        <div>
-            <!-- Social Buttons -->
-            <button type="button" class="btn btn-outline-secondary nav-item" data-bs-toggle="modal"
-                data-bs-target="#whatsappModal">
-                <i class="bi bi-whatsapp"></i>
-            </button>
-            <button type="button" class="btn btn-outline-secondary nav-item" data-bs-toggle="modal"
-                data-bs-target="#emailModal">
-                <i class="bi bi-envelope"></i>
-            </button>
-            <button type="button" class="btn btn-outline-secondary nav-item" data-bs-toggle="modal"
-                data-bs-target="#facebookModal">
-                <i class="bi bi-facebook"></i>
-            </button>
-            <button type="button" class="btn btn-outline-secondary nav-item" data-bs-toggle="modal"
-                data-bs-target="#mapModal">
-                <i class="bi bi-geo-alt"></i>
-            </button>
-        </div>
-        Calle Decano Francisco Rojas Folgado S/N, 14006 Córdoba
+    <footer>
+        <p>Calle Decano Francisco Rojas Folgado S/N, 14006 Córdoba</p>
     </footer>
 
     <!-- EXTRA STUFF ! EXTRA STUFF ! EXTRA STUFF ! EXTRA STUFF ! EXTRA STUFF -->
